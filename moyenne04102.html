@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>applimoyenne </title>
+  <link href="
+    moy.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="app">
+
+    <p class="aop-question">Merci d'entrer les notes dont vous souhaitez calculer la moyenne:<br></p>
+    <input v-model="note" /> <br>
+
+    <p class="aop-question">La note que vous venez de saisir est: <span class="aop-liste">{{note}}</span></p> <br>
+
+    <button v-on:click="stockernote"> Valider</button>
+
+
+    <div v-for=" (elem,index) in tableau">
+      <p>
+        <span class="aop-liste">Numéro d'ordre: </span><span class="aop-span">{{index+1}} </span> <span
+          class="aop-liste">Note:
+        </span><span class="aop-span">{{elem.entree}}</span>
+      </p>
+
+    </div>
+
+
+    <button v-on:click="totalnote"> Le total des notes est</button>
+    <button v-on:click="moynote"> La moyenne des notes est</button>
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="moy2.js"></script>
+</body>
+
+</html>
